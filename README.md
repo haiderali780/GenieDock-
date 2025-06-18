@@ -45,7 +45,7 @@ The main focus is on being **FREE**, **OPEN SOURCE**, and **PRIVATE**.
 
 ## **Architecture**
 
-**Project Shard** consists of several parts:
+**GenieDock** consists of several parts:
 
 - **App** - A modern GUI interface built with Next.js.
 - **Database** - PostgreSQL database with vector support to store all your data
