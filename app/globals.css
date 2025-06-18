@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	@apply bg-lightBg text-lightText dark:bg-darkBg dark:text-darkText;
+}
+
+@layer base {
+	.mainNavItem {
+		@apply cursor-pointer transition-all duration-200 hover:text-lightAccent dark:hover:text-darkAccent;
+	}
+
+	.userMessage {
+		@apply z-10 self-end bg-lightSecondary after:absolute after:-bottom-1 after:-right-1 after:z-0 after:h-3 after:w-3 after:-rotate-[43deg] after:rounded-es-full after:bg-inherit dark:bg-darkSecondary;
+	}
+
+	.messageInput {
+		@apply flex-1 rounded-lg bg-lightSecondary px-2 py-3 ring-opacity-0 placeholder:text-lightTextSecondary focus:outline-none focus:ring focus:ring-lightAccent dark:bg-darkSecondary dark:placeholder:text-darkTextSecondary dark:focus:ring-darkAccent;
+	}
+
+	.pageContainer {
+		@apply mb-2 h-full max-h-full p-4 pb-2 pt-10 md:p-10 md:pb-4;
+	}
+
+	.spinner {
+		@apply h-24 w-24 rounded-full border-8 border-lightAccent/10 border-t-lightPrimary dark:border-darkAccent/10 dark:border-t-darkPrimary;
+
+		animation: 1s spin linear infinite;
+	}
+	@keyframes spin {
+		to {
+			transform: rotate(360deg);
+		}
+	}
+}
